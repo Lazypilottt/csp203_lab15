@@ -13,6 +13,7 @@ echo "\documentclass{article}" > $output_file
 echo "\usepackage{geometry}" >> $output_file
 echo "\geometry{a4paper, margin=1in}" >> $output_file
 echo "\usepackage{longtable}" >> $output_file
+echo "\title{Heart Data}" >> $output_file
 echo "\begin{document}" >> $output_file
 echo "\begin{longtable}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}" >> $output_file
 echo "\hline" >> $output_file
@@ -40,6 +41,7 @@ tail -n +2 $input_file | while IFS=',' read -r -a row; do
         else
             echo -n "${row[i]} & " >> $output_file
         fi
+
     done
     echo "\\\\" >> $output_file
     echo "\hline" >> $output_file
@@ -48,5 +50,4 @@ done
  
 echo "\end{longtable}" >> $output_file
 echo "\end{document}" >> $output_file
- 
 echo "LaTeX file created: $output_file"

@@ -15,6 +15,7 @@ echo "\geometry{a4paper, margin=1in}" >> $output_file
 echo "\usepackage{longtable}" >> $output_file
 echo "\title{Heart Data}" >> $output_file
 echo "\begin{document}" >> $output_file
+echo "\maketitle" >> $output_file
 echo "\begin{longtable}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}" >> $output_file
 echo "\hline" >> $output_file
  

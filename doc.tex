@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{pgfplotstable}
+\usepackage{booktabs}
+\usepackage{placeins}
+\title{Document}
+\author{Aditya Yadav}
+\begin{document}
+\maketitle
+\section{Table}
+\begin{table}[h!]
+\centering
+\caption{Heart Data}
+\pgfplotstabletypeset[
+col sep=space,
+header=true,
+string type,
+]{heart.csv}
+\end{table}
+\end{document}
